@@ -1,5 +1,5 @@
-import { Controller, Get, Param, Inject, OnModuleInit } from '@nestjs/common';
-import { ClientKafka } from '@nestjs/microservices';
+import { Controller, Get, Inject, OnModuleInit, Param } from '@nestjs/common';
+import { ClientKafka, MessagePattern, Payload } from '@nestjs/microservices';
 import { Producer } from '@nestjs/microservices/external/kafka.interface';
 import { RoutesService } from './routes.service';
 
@@ -11,10 +11,6 @@ export class RoutesController implements OnModuleInit {
     @Inject('KAFKA_SERVICE')
     private kafkaClient: ClientKafka,
   ) {}
-
-  async onModuleInit() {
-    this.kafkaProducer = await this.kafkaClient.connect();
-  }
 
   @Get(':id/start')
   startRoute(@Param('id') id: string) {
@@ -28,6 +24,25 @@ export class RoutesController implements OnModuleInit {
         },
       ],
     });
+  }
+
+  async onModuleInit() {
+    this.kafkaProducer = await this.kafkaClient.connect();
+  }
+
+  @MessagePattern('route.new-position')
+  consumeNewPosition(
+    @Payload()
+    message: {
+      value: {
+        routeId: string;
+        clientId: string;
+        position: [number, number];
+        finished: boolean;
+      };
+    },
+  ) {
+    console.log(message.value);
   }
 
   @Get()
