@@ -2,7 +2,7 @@
 
 ## Descrição
 
-Repositório do front-end feito com Golang (Backend)
+Repositório do backend feito com Golang (Backend)
 
 **Importante**: A aplicação do [Apache Kafka](/apache-kafka/README.md) deve estar rodando primeiro.
 
