@@ -41,25 +41,25 @@ go run main.go
 
 ### Para Windows
 
-Lembrar de instalar o WSL2 e Docker. Vejo o vídeo: [https://www.youtube.com/watch?v=usF0rYCcj-E](https://www.youtube.com/watch?v=usF0rYCcj-E) 
+Lembrar de instalar o WSL2 e Docker. Vejo o vídeo: [https://www.youtube.com/watch?v=usF0rYCcj-E](https://www.youtube.com/watch?v=usF0rYCcj-E)
 
-Siga o guia rápido de instalação: [https://github.com/codeedu/wsl2-docker-quickstart](https://github.com/codeedu/wsl2-docker-quickstart) 
+Siga o guia rápido de instalação: [https://github.com/codeedu/wsl2-docker-quickstart](https://github.com/codeedu/wsl2-docker-quickstart)
 
 ---
 
-# Simulator Go
+## Simulator Go
 
 -> go mod init github.com/codeedu/imersaofsfc2-simulator
--> github.com/natanaelsc96/imersao-fullcycle-8/simulator
+-> github.com/natanaelsc96/imersao-fullcycle-codelivery/simulator
 
--> imersao-fullcycle-8/simulator
+-> imersao-fullcycle-codelivery/simulator
 -> docker compose up -d
 -> docker exec -it simulator bash
 -> go run main.go
 
 ## Kafka Docker Container
 
--> imersao-fullcycle-8/simulator/.docker/kafka
+-> imersao-fullcycle-codelivery/simulator/.docker/kafka
 
 -> docker compose up -d
 

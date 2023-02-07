@@ -7,8 +7,8 @@ import (
 	"time"
 
 	ckafka "github.com/confluentinc/confluent-kafka-go/kafka"
-	route2 "github.com/natanaelsc96/imersao-fullcycle-8/simulator/application/route"
-	"github.com/natanaelsc96/imersao-fullcycle-8/simulator/infra/kafka"
+	route2 "github.com/natanaelsc96/imersao-fullcycle-codelivery/simulator/application/route"
+	"github.com/natanaelsc96/imersao-fullcycle-codelivery/simulator/infra/kafka"
 )
 
 // Produce is responsible to publish the positions of each request

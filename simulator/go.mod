@@ -1,4 +1,4 @@
-module github.com/natanaelsc96/imersao-fullcycle-8/simulator
+module github.com/natanaelsc96/imersao-fullcycle-codelivery/simulator
 
 go 1.16
 
